@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Kampus Merdeka Official</title>
+    <style>
+        .dropdown-active .dropdown { display: block; }
+        .jumbotron-bg {
+            background-image: url('img/bg.webp');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="bg-gray-600 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-3">
+                <div class="flex items-center">
+                    <img src="img/pendidikan.webp" alt="Kampus Merdeka Logo" class="h-10 mr-3">
+                    <img src="img/logo.webp" alt="Kampus Merdeka Logo" class="h-10 mr-3">
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="text-white px-3 py-2 rounded-md text-sm font-medium">Beranda</a>
+                    <a href="#" class="text-white px-3 py-2 rounded-md text-sm font-medium">Program</a>
+                    <a href="#" class="text-white px-3 py-2 rounded-md text-sm font-medium">Butuh Bantuan?</a>
+                    <a href="#" class="bg-white hover:bg-white text-black px-3 py-2 rounded-md text-sm font-medium"><i class="fas fa-user"></i> Masuk ke Akun</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-white shadow-md py-3 relative z-20 flex justify-center space-x-4">
+        <div class="flex justify-center space-x-4" id="sub-nav">
+            <button onclick="toggleDropdown('dropdown1')" class="text-black hover:text-blue-800 font-medium my-3">
+                Kampus Mengajar
+                <i class="fas fa-chevron-down ml-1"></i>
+            </button>
+        </div>
+        <div class="flex justify-center space-x-4" id="sub-nav">
+            <button onclick="toggleDropdown('dropdown2')" class="text-black hover:text-blue-800 font-medium my-3">
+                Magang MSIB
+                <i class="fas fa-chevron-down ml-1"></i>
+            </button>
+        </div>
+        <div class="flex justify-center space-x-4" id="sub-nav">
+            <button onclick="toggleDropdown('dropdown3')" class="text-black hover:text-blue-800 font-medium my-3">
+                Studi Independen Bersertifikat
+                <i class="fas fa-chevron-down ml-1"></i>
+            </button>
+        </div>
+        <div class="flex justify-center space-x-4" id="sub-nav">
+            <button onclick="toggleDropdown('dropdown4')" class="text-black hover:text-blue-800 font-medium my-3">
+                Pertukaran Mahasiswa Merdeka
+                <i class="fas fa-chevron-down ml-1"></i>
+            </button>
+        </div>
+        <div class="flex justify-center space-x-4" id="sub-nav">
+            <button class="text-black hover:text-blue-800 font-medium my-3">
+                Program dan Kegiatan Lainnya
+                <i class="fas fa-chevron-down ml-1"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="dropdown1" class="py-4 hidden">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <!-- Item -->
+            <div class="flex flex-wrap justify-between bg-white p-4 rounded">
+                <!-- Left side with title and description -->
+                <div class="flex-1 min-w-0">
+                    <h2 class="text-lg font-semibold text-blue-600">Kampus Mengajar</h2>
+                    <p class="mt-1 text-sm text-gray-600">
+                        Bantu peningkatan kualitas pendidikan dasar dengan terlibat langsung pada proses pengajaran di sekolah-sekolah yang berlokasi di seluruh daerah di Indonesia.
+                    </p>
+                    <div class="ml-4 flex-shrink-0">
+                        <a href="#" class="block bg-white border-2 text-sm px-4 py-2 text-black hover:bg-blue-100 rounded">Selengkapnya</a>
+                    </div>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
+                            <!-- Column 1 -->
+                            <div class="space-y-1">
+                                <h3 class="text-lg leading-6 font-medium text-blue-600">Pendaftaran</h3>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Cara Mendaftar</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Syarat dan Ketentuan</a>
+                            </div>
+                            <!-- Column 2 -->
+                            <div class="space-y-1">
+                                <h3 class="text-lg leading-6 font-medium text-blue-600">Seleksi dan Penerimaan</h3>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Proses Seleksi</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Pengerjaan Tes</a>
+                            </div>
+                            <!-- Column 3 -->
+                            <div class="space-y-1">
+                                <h3 class="text-lg leading-6 font-medium text-blue-600">Pelaksanaan Program</h3>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Pembekalan</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Pengisian Log Mingguan</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Laporan Akhir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right side with links -->
+                
+            </div>
+
+            <!-- Other items go here... -->
+
+        </div>
+    </div>
+    <div id="dropdown2" class="py-4 hidden">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <!-- Item -->
+            <div class="flex flex-wrap justify-between bg-white p-4 rounded">
+                <!-- Left side with title and description -->
+                <div class="flex-1 min-w-0">
+                    <h2 class="text-lg font-semibold text-blue-600">Magang MSIB</h2>
+                    <p class="mt-1 text-sm text-gray-600">
+                        Dapatkan pengalaman dunia kerja secara langsung sebagai persiapan kariermu.
+                    </p>
+                    <div class="ml-4 flex-shrink-0">
+                        <a href="#" class="block bg-white border-2 text-sm px-4 py-2 text-black hover:bg-blue-100 rounded">Selengkapnya</a>
+                    </div>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
+                            <!-- Column 1 -->
+                            <div class="space-y-1">
+                                <h3 class="text-lg leading-6 font-medium text-blue-600">Pendaftaran</h3>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Cara Mendaftar</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Syarat dan Ketentuan</a>
+                            </div>
+                            <!-- Column 2 -->
+                            <div class="space-y-1">
+                                <h3 class="text-lg leading-6 font-medium text-blue-600">Seleksi dan Penerimaan</h3>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Proses Seleksi</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Pengerjaan Tes</a>
+                            </div>
+                            <!-- Column 3 -->
+                            <div class="space-y-1">
+                                <h3 class="text-lg leading-6 font-medium text-blue-600">Pelaksanaan Program</h3>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Pembekalan</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Pengisian Log Mingguan</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Laporan Akhir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right side with links -->
+                
+            </div>
+
+            <!-- Other items go here... -->
+
+        </div>
+    </div>
+    <div id="dropdown3" class="py-4 hidden">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <!-- Item -->
+            <div class="flex flex-wrap justify-between bg-white p-4 rounded">
+                <!-- Left side with title and description -->
+                <div class="flex-1 min-w-0">
+                    <h2 class="text-lg font-semibold text-blue-600">Studi Independen Bersertifikat</h2>
+                    <p class="mt-1 text-sm text-gray-600">
+                        Jalankan proyek penelitian dengan studi kasus nyata dari para pelaku industri ternama.
+                    </p>
+                    <div class="ml-4 flex-shrink-0">
+                        <a href="#" class="block bg-white border-2 text-sm px-4 py-2 text-black hover:bg-blue-100 rounded">Selengkapnya</a>
+                    </div>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
+                            <!-- Column 1 -->
+                            <div class="space-y-1">
+                                <h3 class="text-lg leading-6 font-medium text-blue-600">Pendaftaran</h3>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Cara Mendaftar</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Syarat dan Ketentuan</a>
+                            </div>
+                            <!-- Column 2 -->
+                            <div class="space-y-1">
+                                <h3 class="text-lg leading-6 font-medium text-blue-600">Seleksi dan Penerimaan</h3>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Proses Seleksi</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Pengerjaan Tes</a>
+                            </div>
+                            <!-- Column 3 -->
+                            <div class="space-y-1">
+                                <h3 class="text-lg leading-6 font-medium text-blue-600">Pelaksanaan Program</h3>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Pembekalan</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Pengisian Log Mingguan</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Laporan Akhir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right side with links -->
+                
+            </div>
+
+            <!-- Other items go here... -->
+
+        </div>
+    </div>
+    <div id="dropdown4" class="py-4 hidden">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <!-- Item -->
+            <div class="flex flex-wrap justify-between bg-white p-4 rounded">
+                <!-- Left side with title and description -->
+                <div class="flex-1 min-w-0">
+                    <h2 class="text-lg font-semibold text-blue-600">Pertukaran Mahasiswa Merdeka</h2>
+                    <p class="mt-1 text-sm text-gray-600">
+                        Program pertukaran dengan universitas lain dari seluruh Indonesia yang bertujuan untuk memperkaya khazanah budayamu.
+                    </p>
+                    <div class="ml-4 flex-shrink-0">
+                        <a href="#" class="block bg-white border-2 text-sm px-4 py-2 text-black hover:bg-blue-100 rounded">Selengkapnya</a>
+                    </div>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
+                            <!-- Column 1 -->
+                            <div class="space-y-1">
+                                <h3 class="text-lg leading-6 font-medium text-blue-600">Pendaftaran</h3>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Cara Mendaftar</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Syarat dan Ketentuan</a>
+                            </div>
+                            <!-- Column 2 -->
+                            <div class="space-y-1">
+                                <h3 class="text-lg leading-6 font-medium text-blue-600">Seleksi dan Penerimaan</h3>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Proses Seleksi</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Pengerjaan Tes</a>
+                            </div>
+                            <!-- Column 3 -->
+                            <div class="space-y-1">
+                                <h3 class="text-lg leading-6 font-medium text-blue-600">Pelaksanaan Program</h3>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Pembekalan</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Pengisian Log Mingguan</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Laporan Akhir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right side with links -->
+                
+            </div>
+
+            <!-- Other items go here... -->
+
+        </div>
+    </div>
+        
+    <div class="jumbotron-bg text-white py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-5xl font-bold mb-4">Ambil Kendali Masa Depanmu</h1>
+            <h2 class="text-2xl mb-4">Kampus Merdeka adalah cara terbaik berkuliah. Dapatkan kemerdekaan untuk membentuk masa depan yang sesuai dengan aspirasi kariermu.</h2>
+            <div class="flex space-x-4">
+                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 border border-blue-700 rounded shadow">Telusuri Program</a>
+                <a href="#" class="bg-transparent textblack font-semibold py-2 px-4 border bg-white text-black hover:border-transparent rounded">Cek Persyaratan Umum</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gray-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-center text-3xl font-extrabold text-gray-900 mb-8">Program dan Kegiatan Unggulan</h2>
+            
+            <div class="flex overflow-hidden justify-center space-x-6">
+                <!-- Slider Buttons -->
+                <button class="rounded-full bg-white p-3 shadow-md" aria-label="Previous">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <!-- Card Container -->
+                <div class="flex space-x-4">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-black mb-2">Kampus Mengajar</h3>
+                        <p class="text-sm text-gray-500 mb-4">
+                            Bantu tingkatkan kualitas pengajaran pendidikan dasar melalui Kampus Mengajar
+                        </p>
+                        <p class="text-xs text-gray-400 mb-6">Pendaftaran: Telah ditutup pada 25 November 2023</p>
+                        <a href="#" class="text-sm bg-black text-white py-2 px-4 rounded-md">Selengkapnya</a>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-black mb-2">MSIB</h3>
+                        <p class="text-sm text-gray-500 mb-4">
+                            Rasakan pengalaman 
+                            dunia kerja dengan terjun 
+                            langsung melalui  Magang MSIB
+                        </p>
+                        <a href="#" class="text-sm bg-black text-white py-2 px-4 rounded-md">Selengkapnya</a>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-black mb-2">Studi Independen</h3>
+                        <p class="text-sm text-gray-500 mb-4">
+                            Riset kolaboratif bersama perusahaan ternama  melalui Studi Independen
+                        </p>
+                        <a href="#" class="text-sm bg-black text-white py-2 px-4 rounded-md">Selengkapnya</a>
+                    </div>
+
+                </div>
+
+                <!-- Slider Buttons -->
+                <button class="rounded-full bg-white p-3 shadow-md" aria-label="Next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="text-center mt-6">
+                <a href="#" class="bg-black text-white px-3 py-2 rounded-md text-sm font-medium">Lihat Program Lainnya</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="bg-black py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center lg:items-start">
+            <div class="lg:w-1/2 text-white">
+                <h2 class="text-3xl font-extrabold mb-4">Kampus Merdeka</h2>
+                <p class="mb-4">
+                    Program persiapan karier yang komprehensif untuk mempersiapkan generasi terbaik Indonesia.
+                </p>
+                <p class="mb-6">
+                    Kampus Merdeka adalah bagian dari kebijakan Merdeka Belajar oleh Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi (Kemendikbudristek) yang memberikan seluruh mahasiswa kesempatan untuk mengasah kemampuan sesuai bakat dan minat dengan terjun langsung ke dunia kerja sebagai langkah persiapan karier.
+                </p>
+            </div>
+            <div class="lg:w-1/2 flex justify-center lg:justify-end mt-6 lg:mt-0">
+                <img src="img/img1.webp" alt="Kampus Merdeka" class="rounded-xl shadow-lg">
+            </div>
+        </div>
+        <div class="text-center space-y-6">
+            <br><br>
+            <h2 class="text-3xl font-extrabold text-white mb-6">Apa saja manfaat program Kampus Merdeka?</h2>
+            <br><br>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-white">
+                <div class="flex flex-col items-center ">
+                    <div class="bg-yellow-400 rounded-full p-6">
+                        <img src="img/icon-1.webp" alt="Icon 1" class="h-12 w-12 mb-2">
+                    </div>
+                    <p>Kegiatan dapat dikonversi menjadi sks</p>
+                </div>
+                <div class="flex flex-col items-center ">
+                    <div class="bg-yellow-400 rounded-full p-6">
+                        <img src="img/icon-2.webp" alt="Icon 2" class="h-12 w-12 mb-2">
+                    </div>
+                    <p>Perluas jaringan hingga ke luar program studi dan universitas</p>
+                </div>
+                <div class="flex flex-col items-center ">
+                    <div class="bg-yellow-400 rounded-full p-6">
+                        <img src="img/icon-3.webp" alt="Icon 3" class="h-12 w-12 mb-2">
+                    </div>
+                    <p class="max-w-xs">Eksplorasi pengetahuan dan kemampuan di lapangan selama lebih dari satu semester</p>
+                </div>
+                <div class="flex flex-col items-center ">
+                    <div class="bg-yellow-400 rounded-full p-6">
+                        <img src="img/icon-4.webp" alt="Icon 4" class="h-12 w-12 mb-2">
+                    </div>
+                    <p>Menimba ilmu secara langsung dari mitra berkualitas dan terkemuka</p>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <section class="bg-black py-12">
+        <div class="w-full flex justify-center space-x-5 mx-auto px-20">
+            <div class="flex">
+                <h3 class="text-5xl font-bold text-yellow-400 mb-2">725.000+</h3>
+                
+            </div>
+            <div class="flex">
+                <p class="text-5xl text-white">mahasiswa sudah terdaftar dan memiliki akun Kampus Merdeka</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="w-full flex justify-center space-x-5 mx-auto px-20">
+            <div class="flex">
+                <h3 class="text-5xl font-bold text-yellow-400 mb-2">14.000+</h3>
+                
+            </div>
+            <div class="flex">
+                <p class="text-5xl text-white">sekolah dari seluruh Indonesia telah menerima manfaat bantuan pengajaran</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="w-full flex justify-center space-x-5 mx-auto px-20">
+            <div class="flex">
+                <h3 class="text-5xl font-bold text-yellow-400 mb-2">3.000+</h3>
+                
+            </div>
+            <div class="flex">
+                <p class="text-5xl text-white">organisasi dan perusahaan telah mendaftarkan diri sebagai mitra</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="w-full flex justify-center space-x-5 mx-auto px-20">
+            <div class="flex">
+                <h3 class="text-5xl font-bold text-yellow-400 mb-2">1.300+</h3>
+                
+            </div>
+            <div class="flex">
+                <p class="text-5xl text-white">Perguruan Tinggi telah berpartisipasi di berbagai program Kampus Merdeka</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="bg-gray-100 py-12 w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6">Apa saja syarat keikutsertaan mahasiswa?</h2>
+            <p class="text-center text-gray-600 mb-8">Berikut adalah persyaratan umum dari beberapa program Kampus Merdeka.</p>
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200 text-sm text-left text-gray-500">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                        <tr>
+                            <th scope="col" class="py-3 px-6 text-center"></th>
+                            <th scope="col" class="py-3 px-6 text-center">Magang dan Studi 
+                                    Independen 
+                                    Bersertifikat (MSIB)
+                                </th>
+                            <th scope="col" class="py-3 px-6 text-center">Kampus Mengajar</th>
+                            <th scope="col" class="py-3 px-6 text-center">Pertukaran 
+                                Mahasiswa Merdeka</th>
+                            <th scope="col" class="py-3 px-6 text-center">Wirausaha
+                                Merdeka</th>
+                            <th scope="col" class="py-3 px-6 text-center">Indonesian 
+                                    International 
+                                    Student Mobility 
+                                    Awards
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white border-b">
+                            <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">Jenjang Pendidikan</th>
+                            <td class="text-center">S1 atau Vokasi</td>
+                            <td class="text-center">S1 atau Vokasi</td>
+                            <td class="text-center">S1</td>
+                            <td class="text-center">S1</td>
+                            <td class="text-center">S1</td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">Semester</th>
+                            <td class="text-center">
+                                <ul>
+                                    <li>D2/D3/D4: 
+                                        Minimal 
+                                        semester 2</li>
+                                        <li>S1: 
+                                            Minimal 
+                                            semester 4</li>
+                                </ul>
+                            </td>
+                            <td class="text-center">Minimal semester 4</td>
+                            <td class="text-center">Semester 3, 5 atau 7</td>
+                            <td class="text-center">
+                                <ul>
+                                    <li>S1/D3/D4: 
+                                        Minimal 
+                                        semester 5</li>
+                                        <li>D2: Minimal 
+                                            semester 3</li>
+                                            <li>S2/S3: Tanpa 
+                                                batasan</li>
+                                </ul>
+                            </td>
+                            <td class="text-center">Semester 4 atau 6 
+                                saat proses 
+                                pendaftaran</td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">Minimal IPK</th>
+                            <td class="text-center">-</td>
+                            <td class="text-center">3 dari skala 4</td>
+                            <td class="text-center">2.75 dari skala 4</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">
+                                3 dari skala 4</td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap"></th>
+                            <td class="text-center"><button class="border border-black bg-white rounded px-4 py-2 my-2 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                                Selengkapnya
+                              </button></td>
+                              <td class="text-center"><button class="border border-black bg-white rounded px-4 py-2 my-2 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                                Selengkapnya
+                              </button></td>
+                              <td class="text-center"><button class="border border-black bg-white rounded px-4 py-2 my-2 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                                Selengkapnya
+                              </button></td>
+                              <td class="text-center"><button class="border border-black bg-white rounded px-4 py-2 my-2 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                                Selengkapnya
+                              </button></td>
+                              <td class="text-center"><button class="border border-black bg-white rounded px-4 py-2 my-2 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                                Selengkapnya
+                              </button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt-8">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Catatan Lain</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600">
+                        <li>Perguruan Tinggi harus merupakan Perguruan Tinggi Negeri atau Swasta dan berada di bawah Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi. Cek panduannya <a href="#" class="text-blue-600 hover:underline">di sini</a>.</li>
+                        <li>Mahasiswa hanya dapat mengikuti 1 (satu) program per periode.</li>
+                        <li>Harus berstatus <strong>mahasiswa aktif</strong>. Jika mahasiswa lulus/mengikuti yudisium sebelum program berakhir maka dianggap mengundurkan diri dari program Kampus Merdeka.</li>
+                    </ul>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <button class="text-white bg-black hover:bg-gray-100 focus:outline-none rounded px-6 py-2">
+                        Lihat Program Lainnya
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-100 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-12">Pertanyaan Umum</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Left Column -->
+                <div class="space-y-4">
+                    <!-- Question -->
+                    <div>
+                        <h3 class="text-lg text-gray-900 font-medium">
+                            Bagaimana cara registrasi akun Merdeka Belajar Kampus Merdeka?
+                        </h3>
+                    </div>
+                    <!-- Question -->
+                    <div>
+                        <h3 class="text-lg text-gray-900 font-medium">
+                            Apa yang harus saya lakukan apabila data saya berbeda atau tidak ada di PDDikti?
+                        </h3>
+                    </div>
+                    <!-- Question -->
+                    <div>
+                        <h3 class="text-lg text-gray-900 font-medium">
+                            Bagaimana jika saya gagal verifikasi Nomor Induk Siswa Nasional (NISN)?
+                        </h3>
+                    </div>
+                    <!-- Question -->
+                    <div>
+                        <h3 class="text-lg text-gray-900 font-medium">
+                            Apa saja syarat verifikasi rekening bank dan bagaimana caranya?
+                        </h3>
+                    </div>
+                </div>
+                <!-- Right Column -->
+                <div class="space-y-4">
+                    <!-- Question -->
+                    <div>
+                        <h3 class="text-lg text-gray-900 font-medium">
+                            Bagaimana cara cek data saya di PDDikti?
+                        </h3>
+                    </div>
+                    <!-- Question -->
+                    <div>
+                        <h3 class="text-lg text-gray-900 font-medium">
+                            Bagaimana cara verifikasi Nomor Induk Siswa Nasional (NISN)?
+                        </h3>
+                    </div>
+                    <!-- Question -->
+                    <div>
+                        <h3 class="text-lg text-gray-900 font-medium">
+                            Apakah saya boleh mendaftar lebih dari 1 program Kampus Merdeka dalam periode yang sama?
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <button class="border border-black bg-white rounded px-4 py-2 my-2 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                    Lihat Pertanyaan Lainnya
+                  </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="lg:flex lg:justify-between">
+                <div class="mb-6 mr-5 lg:mb-0 flex flex-col space-y-2">
+                    <img src="img/pendidikan.webp" alt="Tut Wuri Handayani" class="w-12">
+                </div>
+                <div class="mb-6 lg:mb-0 flex flex-col space-y-2">
+                    <p>Direktorat Jenderal Pendidikan Tinggi, Riset, dan Teknologi (Diktiristek)</p>
+                    <p>marketing@kampusmerdeka.co</p>
+                    <p>Jl. Jenderal Sudirman, Senayan, Jakarta 10270</p>
+                    <br><br><br><br>
+                    <div class="flex space-x-4">
+                        <!-- Social Icons -->
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Website"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="flex flex-col space-y-2">
+                        <span class="font-bold">Navigasi</span>
+                        <a href="#">Beranda</a>
+                        <a href="#">Tentang Kami</a>
+                        <a href="#">Berita</a>
+                        <a href="#">Pengumuman</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Program</a>
+                        <a href="#">Daftar</a>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <span class="font-bold">Tautan Eksternal</span>
+                        <a href="#">Mitra Kampus Merdeka</a>
+                        <!-- ... other links ... -->
+                    </div>
+                </div>
+
+                <div class="flex flex-col space-y-4">
+                    <p>Hak Cipta 2022 Kementerian Pendidikan dan Kebudayaan RI</p>
+                    <p>Foto oleh ITS, ITERA, and UI</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDropdown(dropdownId) {
+            var dropdown = document.getElementById(dropdownId);
+            var chevron = dropdown.previousElementSibling.querySelector('.chevron');
+            dropdown.classList.toggle('hidden');
+            chevron.classList.toggle('fa-chevron-down');
+            chevron.classList.toggle('fa-chevron-up');
+        }
+    </script>
+
+    
+</body>
+</html>
+
+
+
